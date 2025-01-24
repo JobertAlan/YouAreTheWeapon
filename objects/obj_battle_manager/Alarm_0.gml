@@ -1,10 +1,11 @@
 
+obj_battle_enemy.hp -= damage_to_enemy;
 
-if (check_for_end())
+if (!obj_battle_player.energy)
 {
-	alarm[2] = 60;
+    enemy_turn = 1;
+    obj_battle_player.energy = 5;
+    alarm[1] = 60;
 }
-else
-{
-	alarm[1] = 60;
-}
+
+
