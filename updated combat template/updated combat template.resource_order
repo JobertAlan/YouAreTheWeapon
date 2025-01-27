@@ -1,0 +1,7 @@
+{
+  "FolderOrderSettings":[],
+  "ResourceOrderSettings":[
+    {"name":"obj_action_attack_1","order":1,"path":"objects/obj_action_attack_1/obj_action_attack_1.yy",},
+    {"name":"Sprite8","order":1,"path":"sprites/Sprite8/Sprite8.yy",},
+  ],
+}
