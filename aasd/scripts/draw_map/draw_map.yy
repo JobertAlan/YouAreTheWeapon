@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"draw_map",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"draw_map",
+  "parent":{
+    "name":"map_generator",
+    "path":"folders/Scripts/map_generator.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}
