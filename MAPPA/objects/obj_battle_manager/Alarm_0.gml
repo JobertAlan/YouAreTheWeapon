@@ -27,13 +27,16 @@ switch (global.enemyTurn) {
         switch (global.playerAction) {
                             
             case 0:  // Add Shield to player
+                global.playerEnergy-= 3;    
+            
                 global_add_shield(global.enemyTurn)
                 show_debug_message("current shields: " + string(global.playerShield))
                 show_debug_message("current energy " + string(global.playerEnergy))
             break;
             
             case 1:  // Basic Player Attack
-                
+                global.playerEnergy--;    
+            
                 global_basic_attack(global.playerDmg, global.enemyTurn);
                 show_debug_message("current enemy hp " + string(global.enemyHp))
             
@@ -80,10 +83,13 @@ switch (global.enemyTurn) {
     
 }
 
+//  was supposed to show enemy turn before the enemy does it but ehhh i can't be arsed to figure out where to put it
+//if (global.playerEnergy == 5)
+//{
+    //global.enemyNextMove = enemy_next_move();
+//}
+//
 check_game_end()
 
-if (global.playerEnergy == 5)
-{
-    global.enemyNextMove = enemy_next_move();
-}
+
 
