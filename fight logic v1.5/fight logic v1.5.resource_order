@@ -1,0 +1,17 @@
+{
+  "FolderOrderSettings":[],
+  "ResourceOrderSettings":[
+    {"name":"obj_action_attack_1","order":1,"path":"objects/obj_action_attack_1/obj_action_attack_1.yy",},
+    {"name":"obj_action_dex_Ev","order":4,"path":"objects/obj_action_dex_Ev/obj_action_dex_Ev.yy",},
+    {"name":"obj_action_dex_ping","order":2,"path":"objects/obj_action_dex_ping/obj_action_dex_ping.yy",},
+    {"name":"battle_attack","order":1,"path":"sprites/battle_attack/battle_attack.yy",},
+    {"name":"battle_bg","order":3,"path":"sprites/battle_bg/battle_bg.yy",},
+    {"name":"battle_dex_eviscerate","order":7,"path":"sprites/battle_dex_eviscerate/battle_dex_eviscerate.yy",},
+    {"name":"battle_dex_sting","order":8,"path":"sprites/battle_dex_sting/battle_dex_sting.yy",},
+    {"name":"battle_endTurn","order":5,"path":"sprites/battle_endTurn/battle_endTurn.yy",},
+    {"name":"battle_player","order":2,"path":"sprites/battle_player/battle_player.yy",},
+    {"name":"battle_skill","order":4,"path":"sprites/battle_skill/battle_skill.yy",},
+    {"name":"battle_str_smash","order":9,"path":"sprites/battle_str_smash/battle_str_smash.yy",},
+    {"name":"Sprite8","order":6,"path":"sprites/Sprite8/Sprite8.yy",},
+  ],
+}
