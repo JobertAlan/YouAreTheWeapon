@@ -8,3 +8,5 @@ hp_total = hp;
 damage = global.enemyDmg;
 shield = global.enemyShield;
 
+shield_total = shield;
+

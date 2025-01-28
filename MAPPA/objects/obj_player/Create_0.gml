@@ -6,9 +6,10 @@ hp = global.playerHp;
 hp_total = hp;
 damage = global.playerDmg;
 shield = global.playerShield;
+shield_total = shield;
 
 energy = global.playerEnergy;
-
+energy_total = energy;
 
 
 //show_debug_message(string(dex));
