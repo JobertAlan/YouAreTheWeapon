@@ -6,7 +6,7 @@ if (!clear_condition)
             {
                 draw_sprite(spr_hover, 0, x, y);
             }
-            else 
+            else // Add another draw sprite here to indicate cleared levels
             {
                 draw_self();
             }

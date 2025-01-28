@@ -28,6 +28,7 @@ global.inv = ds_list_create();
 global.enemyHp = 10;
 global.enemyDmg = 1;
 global.enemyShield = 0;
+global.enemyShieldModifier = 0;
 
 /** 
     0 = attack

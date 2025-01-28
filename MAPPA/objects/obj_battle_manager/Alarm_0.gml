@@ -1,4 +1,11 @@
 // Dev note: Sorry kenneth for the hieroglyphics -joerge
+/**
+ *     Player energy subtraction is handled inside the 2nd switch statement
+ *      So that means for now, casting shields and basic atk both consume energy in their own switch case
+ * 
+ *      So there should be no problem with implementing the other types of damage
+ * 
+ * /
 
 /** 
     For switch case,
@@ -14,8 +21,11 @@
 *  3 = player dex attack 2
 *  4 = player str attack 1
 *  5 = player str attack 2
+ * 
+ * 9 = player end turn (reduce energy to 0)
 * */
 
+global.enemyNextMove = enemy_next_move();
 
 check_game_end()
 
@@ -35,14 +45,41 @@ switch (global.enemyTurn) {
             break;
             
             case 1:  // Basic Player Attack
-                global.playerEnergy--;    
+                global.playerEnergy--;    // <- Energy consumed here
             
                 global_basic_attack(global.playerDmg, global.enemyTurn);
-                show_debug_message("current enemy hp " + string(global.enemyHp))
-            
                 
-                show_debug_message("current energy " + string(global.playerEnergy)) 
+                    show_debug_message("current enemy hp " + string(global.enemyHp))
+                    show_debug_message("current energy " + string(global.playerEnergy)) 
             break;
+            
+            case 2:
+                // Insert attack here
+            
+                // Create the function to do the attack that you want and call it here
+            break;
+            
+            case 3:
+                // Insert attack here
+                
+                // Create the function to do the attack that you want and call it here
+            break;
+            
+            case 4:
+                // Insert attack here
+            
+                // Create the function to do the attack that you want and call it here
+            break;
+            
+            case 5:
+                // Insert attack here
+            
+                // Create the function to do the attack that you want and call it here
+            break;
+            
+            
+            case 9: // Ends turn early
+                global.playerEnergy = 0;
         }
         
         if (global.playerEnergy <= 0)
@@ -66,7 +103,7 @@ switch (global.enemyTurn) {
             
             case 0: // Add Shield to enemy
                 global_add_shield(global.enemyTurn)
-                            show_debug_message("current enemy shields: " + string(global.enemyShield))
+                            show_debug_message("current enemy shields: " + string(global.enemyShield))  // just indented to show debug message
                             
             break;
             

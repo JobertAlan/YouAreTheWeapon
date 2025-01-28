@@ -7,6 +7,23 @@ set_player_action = function(_player_action)
     alarm[0] = 30;
 }
 
+
+// When battle is over, for now just assuming player wins, no logic to check if player dies
+// gain 1 level
+// Reset stats of enemy for programmmatically assigned HP & whatever else you want
+// Reset shields of player back to 0
+// Returns player to map room
+check_game_end = function()
+{
+    if (global.enemyHp <= 0)
+    {
+        global.lvlsWon++;
+        reset_stats();
+        room_goto(map_room);
+        
+    }
+}
+
 // Enemy stats are altered by altering the global functions
 // This resets them to default after ending a battle
 reset_stats = function()
@@ -19,6 +36,7 @@ reset_stats = function()
     global.enemyHp = 10;
     global.enemyDmg = 1;
     global.enemyShield = 0;
+    global.enemyShieldModifier = 0;   // Future planned use where maybe higher lvl enemy can cast like 4-5 shield instead of only 3 but not used atm
     
     /** 
         0 = attack
@@ -28,22 +46,8 @@ reset_stats = function()
     global.enemyNextMove = 0;
 }
 
-check_game_end = function()
-{
-    if (global.enemyHp <= 0)
-    {
-        global.lvlsWon++;
-        reset_stats();
-        room_goto(map_room);
-        
-    }
-}
 
-// Checks if X has shields, if so subtract from there before HP
-shield_check = function()
-{
-    
-}
+
 
 global_basic_attack = function(_damage, _turn_order) // Player energy should be handled elsewhere
 {
@@ -95,7 +99,7 @@ global_add_shield = function(_turn_order)
 {
     
     // ensure shields don't go over 10
-    if (_turn_order && global.enemyShield+3 <= 10)
+    if (_turn_order && global.enemyShield+3 <= 10)          // Adds enemy shields
     {
         global.enemyShield += 3;
     }
@@ -103,7 +107,7 @@ global_add_shield = function(_turn_order)
     {
         global.enemyShield = 10;
     }
-    else if (!_turn_order && global.playerShield+3 <= 10)
+    else if (!_turn_order && global.playerShield+3 <= 10)   // Adds player shields
     {
         global.playerShield += 3;
     }
