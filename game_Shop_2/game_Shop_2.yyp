@@ -1,6 +1,6 @@
 {
   "$GMProject":"",
-  "%Name":"imgoinginsane",
+  "%Name":"game_Shop_2",
   "AudioGroups":[
     {"$GMAudioGroup":"","%Name":"audiogroup_default","name":"audiogroup_default","resourceType":"GMAudioGroup","resourceVersion":"2.0","targets":-1,},
   ],
@@ -32,13 +32,15 @@
   "MetaData":{
     "IDEVersion":"2024.11.0.179",
   },
-  "name":"imgoinginsane",
+  "name":"game_Shop_2",
   "resources":[
+    {"id":{"name":"obj_coin","path":"objects/obj_coin/obj_coin.yy",},},
     {"id":{"name":"obj_shop_logic","path":"objects/obj_shop_logic/obj_shop_logic.yy",},},
     {"id":{"name":"rm_Test","path":"rooms/rm_Test/rm_Test.yy",},},
-    {"id":{"name":"spr_Item_1","path":"sprites/spr_Item_1/spr_Item_1.yy",},},
-    {"id":{"name":"spr_Item_2","path":"sprites/spr_Item_2/spr_Item_2.yy",},},
+    {"id":{"name":"spr_Heal","path":"sprites/spr_Heal/spr_Heal.yy",},},
     {"id":{"name":"spr_Item_3","path":"sprites/spr_Item_3/spr_Item_3.yy",},},
+    {"id":{"name":"spr_Shield","path":"sprites/spr_Shield/spr_Shield.yy",},},
+    {"id":{"name":"Sprite4","path":"sprites/Sprite4/Sprite4.yy",},},
   ],
   "resourceType":"GMProject",
   "resourceVersion":"2.0",
