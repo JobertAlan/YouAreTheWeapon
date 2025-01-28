@@ -16,6 +16,9 @@
 *  5 = player str attack 2
 * */
 
+
+check_game_end()
+
 switch (global.enemyTurn) {
     
     // Contains all player actions
@@ -39,26 +42,48 @@ switch (global.enemyTurn) {
             break;
         }
         
+        if (global.playerEnergy <= 0)
+        {
+            global.enemyTurn = 1;
+            global.playerEnergy = 5;    
+            
+            
+            alarm[0] = 30;
+        }
         
     
     break; // break for case 0 player turn
     
+    
+    
     // Contains all enemy actions
     case 1:
+        
         switch (global.enemyNextMove) {
             
             case 0: // Add Shield to enemy
                 global_add_shield(global.enemyTurn)
+                            show_debug_message("current enemy shields: " + string(global.enemyShield))
+                            
             break;
             
             case 1: // Do an attack
                 global_basic_attack(global.enemyDmg, global.enemyTurn)
             break;
         }
+    
+        global.enemyTurn = 0;
+    
     break;
     
     
     
 }
 
+check_game_end()
+
+if (global.playerEnergy == 5)
+{
+    global.enemyNextMove = enemy_next_move();
+}
 

@@ -9,6 +9,15 @@ set_player_action = function(_player_action)
     alarm[0] = 30;
 }
 
+check_game_end = function()
+{
+    if (global.enemyHp <= 0)
+    {
+        global.lvlsWon++;
+        room_goto_previous();
+    }
+}
+
 global_basic_attack = function(_damage, _turn_order) // Player energy should be handled elsewhere
 {
     _entity_hp = 0;
@@ -66,5 +75,13 @@ global_add_shield = function(_turn_order)
 
 enemy_next_move = function()
 {
-    return irandom_range(0, 1);
+    enemy_move = irandom_range(0, 1);
+    
+    if (enemy_move)
+        show_debug_message("Enemy does an attack");
+    else if (!enemy_move) {
+        show_debug_message("Enemy adds shields");
+    }
+    
+    return enemy_move;
 }
