@@ -1,4 +1,5 @@
 
+
 set_player_action = function(_player_action)
 {
     global.playerAction = _player_action;
@@ -21,6 +22,7 @@ check_game_end = function()
         reset_stats();
         room_goto(map_room);
         
+        show_debug_message("After battle Current Player Hp: " + string(global.playerHp))
     }
 }
 

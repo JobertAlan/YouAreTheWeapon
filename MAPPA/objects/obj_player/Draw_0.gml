@@ -9,7 +9,7 @@ var _h = 10;
 
 // For Hp
 draw_sprite_stretched(spr_box, 0, _x, _y, _w, _h);
-draw_sprite_stretched_ext(spr_box, 1, _x, _y, _w * (global.playerHp / hp_total), _h, c_green, 1);
+draw_sprite_stretched_ext(spr_box, 1, _x, _y, _w * (global.playerHp / global.totalPlayerHp), _h, c_green, 1);
 
 
 // For Energy

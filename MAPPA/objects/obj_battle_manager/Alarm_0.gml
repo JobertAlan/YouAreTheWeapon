@@ -109,6 +109,8 @@ switch (global.enemyTurn) {
             
             case 1: // Do an attack
                 global_basic_attack(global.enemyDmg, global.enemyTurn)
+            
+                
             break;
         }
     

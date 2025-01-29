@@ -3,7 +3,7 @@
  * */
 
 hp = global.playerHp;
-hp_total = hp;
+hp_total = global.totalPlayerHp;
 damage = global.playerDmg;
 shield = global.playerShield;
 shield_total = shield;
