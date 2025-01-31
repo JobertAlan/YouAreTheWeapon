@@ -1,5 +1,7 @@
 // Global definitions for player stats
 
+global.currentRoom = 0;     // To track which room the player is in to handle damage animation
+
 global.lvlsWon = 0;  // Tracker for what battles player can enter
 
 global.lvlModifier = 0;

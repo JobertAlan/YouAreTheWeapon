@@ -1,0 +1,1 @@
+image_alpha -= 0.03; // Slowly fade per frame
